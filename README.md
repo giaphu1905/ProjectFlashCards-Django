@@ -1,7 +1,7 @@
 # DoAnFlashCard-Django
 
-Trịnh Hà Gia Phú
-Phạm Hoàng Phúc
+- Trịnh Hà Gia Phú
+- Phạm Hoàng Phúc
 
 ## Requirements
 - Pillow==9.4.0
