@@ -1,0 +1,79 @@
+{% extends "study/navbar_study.html" %}
+
+{% load static %}
+
+{% block title%}Thẻ ghi nhớ: | DPFs{% endblock %}
+
+{% block mycss %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'study/mode/css/mode.css' %}">
+{% endblock %}
+
+{% block content %}
+    <main class="FlashcardShow" style="margin-top: 3.75rem;">
+        <div class="Flashcard-studyPreview d-flex">
+            <div id="flashcard-carousel" class="carousel slide">
+                <div class="carousel-inner">
+                    {% for card in cards %}                        
+                        <div class="carousel-item{% if forloop.first %} active{% endif %}" data-index="{{ forloop.counter }}">
+                            <div class="flip-card shadow-sm" style="height: 580px;"> 
+                                <div class="face front">
+                                    <div style="width: 70%;">
+                                        <h3>{{ card.word }}</h3>
+                                    </div>
+                                </div>
+                                <div class="face back">
+                                    <div style="width: 70%;">
+                                        <h3>{{ card.meaning }}</h3>                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" style="background-color: #b7d9db" href="#flashcard-carousel" role="button" data-bs-slide="prev" onclick="updateIndex(-1)">
+                    <span class="carousel-control-prev-icon bg-red" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" style="background-color: #b7d9db" href="#flashcard-carousel" role="button" data-bs-slide="next" onclick="updateIndex(1)">
+                    <span class="carousel-control-next-icon" aria-hidden="true" ></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+            <div class="underStudyPreview">
+                <div class="d-flex gap-3" style="padding-top: 0.5rem;">
+                    {% if isShuffle %}
+                    <a href="{% url 'study:the-ghi-nho' flashcard_id=flashcard.id %}" type="button" id="btn-mix-card"><i class="fas fa-sync-alt fa-2x"></i></a>
+                    {% else %}
+                    <a href="{% url 'study:the-ghi-nho-tron-the' flashcard_id=flashcard.id %}" type="button" id="btn-mix-card"><i class="fas fa-sync-alt fa-2x"></i></a>
+                    {% endif %}
+                    <span id="describe-btn-mix">Trộn thẻ đang TẮT</span> 
+                </div>
+            </div>   
+        </div>
+    </main>
+{% endblock %}
+
+{% block myjs %}
+    {{ block.super }}
+    <script src="{% static 'study/mode/js/mode_study.js' %}"></script>
+    <script>
+        var countWordValue = {{ flashcard.word_count }};
+        function updateIndex(change) {
+            const activeItem = document.querySelector('.carousel-item.active');
+            var indexcard = activeItem.getAttribute('data-index');
+            
+            indexcard = parseInt(indexcard)+change;
+            if (indexcard == 0) {
+                indexcard = countWordValue;
+            }
+            if (indexcard == countWordValue+1) {
+                indexcard = 1;
+            }
+            const cardCounter = document.getElementById('card-counter-id');
+            cardCounter.textContent = indexcard + '/' + countWordValue;
+        };
+    </script>
+{% endblock %}
+
+

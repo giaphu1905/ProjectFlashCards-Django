@@ -1,0 +1,121 @@
+"Used to đc sử dụng để...","nói về 1 HĐ thường xuyên xảy ra trong quá khứ không xảy ra ở HT"
+"Wish (HT,)","S + wish/wishes + S + V2/Ved
+S + wish/wishes + S + didn't + Vo
+​"
+"Wish(Qk)","S + wish/wishes + S + would/could + Vo
+S + wish/wishes + S + wouldn't/couldn't + Vo"
+"Công thức Used to","(+) S + used to + Vo
+(-) S + didn't + use to + Vo
+(?) Did + S + use to + Vo. ?"
+"HTĐ","(+) S + tobe/Vo/Vs/Ves. ....
+(-) S + tobe/Don't/Doesn't + Vo
+(?) Tobe/Do/Does + S + Vo?"
+"HTTD","(+) S + tobe + V-ing
+(-) S + Tobe + not + V-ing
+(?) Tobe + S + V-ing. ?"
+"Thì HTĐ dùng để","Diễn tả thói quen,HĐ lập đi lập lại ở HT
+Diễn tả sự thật,sự việc xảy ra trg TL(có thời gian)"
+"Thì HTTD dùng để","Diễn tả HĐ đg diễn ra tại thời điểm nói
+Diễn tả HĐ xảy ra dạo gần đây
+Diễn tả HĐ trg TL
+Diễn tả HĐ gây khó chịu ng nói ( thg có always)"
+"QKĐ","(+) S + Was/were/V2/Ved
+(-) S + Was/were + not ./Didn't +/Vo. .
+(?)Was/were/Did + S + Vo/..........?"
+"Thì QKĐ dùng để","HĐ sự việc diễn ra kết thúc trong quá khứ
+HĐ sự việc tại 1 thời điểm cụ thể kết thúc trg QK
+HĐ lặp đi lặp lại trg QK
+Chuỗi HĐ xảy ra trg quá khứ
+​"
+"Thì QKĐ dùng để(tt)","HĐ xen vào(QKĐ) HĐ đg diễn ra(QKTD) trg QK
+Câu Đk loại 2 ko có thật ở hiện tại
+Câu ước ko có thật"
+"Dấu hiệu nhận biết QKĐ","For + khoảng tg
+Since + năm ( tg xác định)
+Yesterday,ago,last(week,year,...)
+​"
+"Nhg từ trg câu có dấu hiệu HTTD nhg chia ở HTĐ","1. Want
+2. Like
+3. Love
+4. Prefer
+5. Need
+6. Believe
+7. Contain
+8. Taste
+9. Suppose
+10. Remember
+11. Realize
+12. Understand
+
+​"
+"Nhg từ trg câu có dấu hiệu HTTD nhg chia ở HTĐ(tt)","12. Understand
+13. Depend
+14. Seem
+15. Know
+16. Belong
+17. Hope
+18. Forget
+19. Hate
+20. Wish
+21. Mean
+22. Lack
+23. Appear
+24. Sound"
+"Dấu hiệu nhận biết HTTD","At the moment/present
+Now ,right now
+Look! listen!"
+"QKTD","(+) S + was/were + V-ing
+(-) S + was/were + not + V-ing
+(?) Was/were + S + V-ing...?"
+"Thì QKTD dùng để","Nhấn mạnh diễn biến,quá trình ,thời gian sự vật, sự việc đó diễn ra(HĐ dài)
+​"
+"Thì QKTD dùng để(tt)","Diễn tả HĐ đg xảy ra(QKTD( thì có HĐ khác xen vào(QKĐ)
+HĐ đg xảy ra tại 1 thời cụ thể trg QK
+HĐ thg xuyên gây khó chịu ng nói trg QK"
+"Dấu hiệu nhận biết QKTD","At + giờ chính xác + time QK
+In năm QK
+While/at the time"
+"HTHT dùng để","Mô tả HĐ xảy ra trg QK và vẫn còn tiếp tục ở thời điểm HT
+​"
+"HTHT dùng để (tt)","HĐ đã hoàn thành cho tới thời điểm HT(ko bít xảy ra từ khi nào)
+Sự kiện đáng nhớ,Kết quả,Kinh nghiêm cho tới bây giờ (thg dùng ever)
+Ex : Have you ever been to japan?"
+"HTHT","(+) S + Have/has + V3
+(-) S + haven't/hasn't + V3
+(?) Have/Has + S + V3?"
+"Vị trí trạng từ","Already,never,ever,just sau have/has
+already có thể đứng cuối câu(rồi)
+Yet : cúi câu
+
+​"
+"Dấu hiệu nhận biết (HTHT)","So far = until now = up to now
+It's the first time"
+"So sánh hơn ở tính từ","Ngắn : S + v + Adj-er + than + N
+Dài : S + v + more + adj + than + N"
+"So sánh nhất ở tính từ / trạng từ","S + v + the + short adj-est + ..
+S + v + the most + adj +.."
+"Câu tường thuật","S + said/told + (that) + S + V"
+"Lùi thì trg câu tường thuật","HTĐ ----> QKĐ , HTTD ----> QKTD
+QkĐ ,HTHT ----> QKHT ,"
+"Lùi từ trg câu tường thuật","Can -> could, may -> might
+must ---> had to, today --> that day
+Now -> then, ago -> before"
+"lùi từ trg câu tường thuật (tt)","Here -> there, these -> those
+Tomorrow -> the day after
+yesterday -> the day before"
+"Complex sentences(câu phức)","Mệnh đề tương phản((al/even)though
+Mệnh đề lí do(because , since)
+​"
+"Complex sentences(tt)","Mệnh đề thời gian(when,while,afer,before,as soon as,.)
+Mệnh đề chỉ mục đích(so that/ in order that)"
+"Tường thuật yes/no và Wh-question","(yes/no): 
+S + asked + (o) + if/whether + S + v
+wh-question:
+S + asked + (o) + wh-question + S + v"
+"Tường thuật dạng mệnh lệnh","(+) S + told + o + to + Vo
+(-) S + told + o + not + to + Vo"
+"Question word before to - Vo","S + ( asked/wonder/have no idea/ + (o) + wh-question(trừ why) + to + Vo"
+"Công thức suggest","Dùng để đề xuất ý tưởng HĐ..
+S + suggest +(that)+ S + should + Vo
+S + suggest + V-ing"
+"The impersonal passive","It + be(is/was,..) + V3(know/belived/reported/claimed/understood) + (that) + S + V"

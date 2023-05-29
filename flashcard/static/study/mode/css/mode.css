@@ -1,0 +1,75 @@
+.FlashcardShow {
+    margin: 0 auto;
+    max-width: 75.5625rem;
+    max-height: 40rem;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.FlashcardShow .FlashcardTitle {
+    align-content: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.FlashcardShow .Flashcard-studyPreview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.flip-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d6dbde;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 0.8s;
+}
+
+.flip-card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+
+.flip-card .face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 260px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    backface-visibility: hidden;
+}
+
+.face.back {
+    transform: rotateY(180deg);
+}
+
+a {
+    color: black;
+}
+.underStudyPreview {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 0.125rem solid #b1b2b7;
+}
+.underStudyPreview button {
+    background: none;
+    border: none;
+    border-radius: 50%;
+}

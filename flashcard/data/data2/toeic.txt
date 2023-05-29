@@ -1,0 +1,43 @@
+"interview","v: phỏng vấn
+n: cuộc phỏng vấn"
+"interviewee","người được phỏng vấn"
+"position
+post","vị trí"
+"opening
+vacancy","vị trí còn khuyết"
+"apply","xin việc"
+"applicant
+candidate","người dự tuyển"
+"application","đơn xin việc"
+"permanent","dài hạn"
+"temporary","tạm thời"
+"full-time
+part-time","toàn thời gian
+bán thời gian"
+"employ
+hire","thuê"
+"employee","nhân viên
+người làm thuê"
+"employer
+boss","ông chủ"
+"employment","công việc
+sự thuê người làm công"
+"interviewer","người phỏng vấn"
+"major
+specialty
+specialize","chuyên ngành"
+"qualify","đủ tiêu chuẩn
+đủ khả năng"
+"qualification","bằng cấp
+trình độ chuyên môn"
+"qualified","có đủ năng lực"
+"require","đòi hỏi
+yêu cầu"
+"requirement","yêu cầu"
+"recruit","tuyển dụng"
+"recruitment","sự tuyển dụng"
+"recruiter","nhà tuyển dụng"
+"train","đào tạo"
+"training","sự đào tạo"
+"Facilities","Cơ sở vật chất"
+"Furniture","Đồ đạc"

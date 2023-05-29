@@ -1,0 +1,42 @@
+{% extends "study/my_flashcard.html" %}
+
+{% block searchfc %}
+    <form method="GET" action="{% url 'study:timkiem-flashcard' %}" class="search-container" style="width: 100%;">
+        <input class="form-control search-input" type="search" name="search_text" value="{{search_text}}" placeholder="Tìm kiếm FlashCard..." aria-label="Search">
+        <button type="submit" class="search-icon bx bx-search" style="border: none; background: none;"></button>
+    </form>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="d-flex justify-content-between p-2" style="border-bottom: 0.125rem solid #b1b2b7;">
+            <h3>Các bộ FlashCard được tìm thấy bởi từ khóa: {{search_text}}</h3>
+        </div>
+        <div id="my-flashcards" class="row p-1">
+            {% for flashcard in flashcards_search %}
+                <div class="col-4 card">
+                    <div class="card-content" style="cursor: auto;">
+                        <a class="card-link" href="{% url 'study:thenho' flashcard_id=flashcard.id %}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{flashcard.title}}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">{{flashcard.word_count}} thuật ngữ</h6>
+                            </div>
+                        </a>
+                        <button onclick="openModal({{flashcard.id}})" class="btn-del-card"><i class="fas fa-ban"></i></button>
+                    </div>
+                    <div class="card-footer" style="cursor: auto;">
+                        <img src="{{flashcard.user.avatar.url}}" alt="avatar" width="30" height="30"> 
+                        <a href="#" class="card-link">{{flashcard.user}}</a>
+                    </div>
+                </div>
+            {% endfor %}
+            {% if flashcards_search %}
+            {% else %}
+                <div class="col-12">
+                    <p class="text-center">Không tìm thấy bộ FlashCard nào có tiêu đề trên.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+{% endblock %}

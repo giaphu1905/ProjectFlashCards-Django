@@ -1,0 +1,135 @@
+"split ends",2,"chẻ ngọn"
+"confectionery
+/kən'fekʃnəri/",2,"đồ ngọt, đồ bánh kẹo (n)"
+"tranquilizer
+/ˈtræŋkwəlaɪzər/",2,"thuốc an thần"
+"tranquility
+/træŋˈkwɪləti/",2,"sự bình yên"
+"counter-productive",2,"phản tác dụng"
+"cosmetic surgery/plastic surgery",2,"phẫu thuật thẩm mĩ"
+"dermatitis
+/,də:mə'taitis/",2,"viêm da"
+"malnutrition
+/'mælnju:'triʃn/",2,"suy dinh dưỡng"
+"malnourished
+ /ˌmælˈnɜːrɪʃt/",2,"bị suy dinh dưỡng"
+"broken/ fractured/ cracked bone",2,"gãy xương"
+"Osteoporosis
+/ˌɑːstioʊpəˈroʊsɪs/",2,"Loãng xương"
+"acupuncture
+/'ækjupʌɳktʃə/",2,"châm cứu"
+"Activity Pyramid
+ /'pirəmid/",2,"tháp hoạt động"
+"epidemic proportions",2,"bệnh dịch"
+"improper detangling",2,"chải tóc không đúng cách"
+"Excessive blow drying",2,"sấy tóc quá nhiều"
+"deadly ailments
+ /'eilmənt/",2,"bệnh chết người"
+"diabetes
+/,daiə'bi:tiz/",2,"bệnh tiểu đường"
+"Dementia
+/di'menʃiə/",2,"chứng mất trí nhớ"
+"additive
+/'æditiv/",2,"chất phụ gia"
+"detrimental",2,"harmful"
+"coloring",2,"phẩm màu"
+"fizzy drink",2,"đồ uống có ga"
+"toddler
+/'tɔdlə/",2,"(n) đứa bé chỉ mới biết đi"
+"bulimia nervosa
+/bju:'limiə/",2,"chứng háu ăn --> hối lỗi --> dùng pp có hại"
+"binge eating
+/bindʤ/",2,"ăn không kiểm soát"
+"anorexia nervosa
+/,ænou'reksiə/",2,"ăn không đúng cách do ám ảnh cân nặng"
+"fasting",2,"nhịn ăn"
+"Purging",2,"thuốc sổ"
+"eating disorders",2,"rối loạn ăn uống"
+"allocate",2,"chi, phân bổ"
+"national budget",2,"ngân sách quốc gia"
+"make investments in",2,"đầu tư vào"
+"lump sum",2,"khoản tiền lớn"
+"lifespan/life expectancy/",2,"tuổi thọ"
+"longevity
+/lɔn'dʤeviti/",2,"trường thọ"
+"mortality rate",2,"tỉ lệ tử vong"
+"ephemeral/ transient
+/i'femərəl/ /'trænziənt/",2,"short-lived, temporary"
+"to raise taxes on",2,"tăng thuế"
+"[ noun ] content",2,"Lượng của cái gì chứ trong một cái gì khác"
+"put on weight",2,"tăng cân"
+"to be prone to obesity
+ /ou'bi:siti/",2,"chắc chắn sẽ béo phì"
+"be addicted to",2,"nghiện"
+"To highlight",2,"to emphasize sth, especially so that pp give it more attention"
+"Heath awareness campaigns",2,"Publicity to encourage pp to be concerned about looking after their health"
+"To take regular exercise",2,"tập thể dục thường xuyên"
+"A sedentary lifestyle
+ /'sedntəri/",2,"lối sống ít vận động"
+"To provide sb with a healthier diet",2,"cung cấp chế độ ăn lành mạnh hơn cho ai đó"
+"Low in fat and high in fiber",2,"ít chất béo và giàu chất xơ"
+"To adopt policies",2,"chấp nhận, thông qua các chính sách"
+"To carry more potential health risks",2,"To have effects which could be bad for one's health"
+"To cause serious mental health problems",2,"Create mental problems that badly affect your health"
+"To maintain a healthy body",2,"To continue to have a strong and well body"
+"To suffer from chronic illnesses/eye diseases",2,"Chịu đựng căn bệnh mãn tính/ bệnh về mắt"
+"To adopt/follow/have/eat a balanced diet",2,"Có một chế độ ăn cân bằng"
+"To take out private health insurance",2,"đăng ký bảo hiểm y tế tư nhân"
+"primary health care",2,"chăm sóc sức khỏe cơ bản"
+"Public Health Service",2,"Dịch vụ y tế cộng đồng"
+"to have a regular check-up",2,"khám bệnh thường xuyên"
+"life threatening conditions",2,"đe dọa tính mạng"
+"To search for a cure",2,"tìm phương pháp chữa trị"
+"The outbreak of an epidemic",2,"Sự bùng phát của dịch bệnh"
+"To build up one's immune system/immunity",2,"Tăng cường hệ miễn dịch"
+"To offer emotional support to sb",2,"đưa ra hỗ trợ tinh thần"
+"rheumatism
+/'ru:mətizm/",2,"bệnh thấp khớp"
+"arthritis
+[ɑ:'θraitis]",2,"bệnh viêm khớp"
+"infection",2,"sự nhiễm trùng"
+"cardiovascular disease",2,"bệnh tim mạch"
+"Cholesterol",2,"mỡ trong máu"
+"stress-related illness",2,"Bệnh liên quan đến stress"
+"vulnerable",2,"dễ bị tổn thương"
+"underfunding",2,"insufficient provision of money for a particular purpose, especially by an organization or government."
+"incurable",2,"không thể cứu chữa, nan y"
+"Flu Epidemic",2,"dịch cúm"
+"circulation
+/,sə:kju'leiʃn/",2,"sự lưu thông"
+"Arteries
+/'ɑ:təri/",2,"động mạch"
+"joints and muscles /mʌsl/",2,"khớp và cơ"
+"antibiotic
+[,æntibai'ɔtik]",2,"thuốc kháng sinh"
+"inflammation
+inflə'meiʃn",2,"sưng viêm"
+"cutbacks",2,"reductions
+(n)những sự cắt giảm"
+"Cells",2,"tế bào"
+"nervous strain",2,"n. /strein/ sự căng thẳng, sự căng"
+"consultant
+/kən'sʌltənt/",2,"Người tư vấn"
+"conventional medicine",2,"Tây y"
+"traditional medicine",2,"y học cổ truyền"
+"holistic medicine",2,"treatments which involve the whole person, including their mental health, rather than just dealing with the symptoms of the illness"
+"surgeon
+/'sə:dʤən/",2,"bác sĩ phẫu thuật"
+"therapeutic
+[,θerə'pju:tik] adj.",2,"(adj) able to cure or relieve disorder"
+"welfare state",2,"phúc lợi xã hội"
+"keep their eyes glued to screens
+waves from computers and wifi devices",2,"dán mắt vào màn hình
+sóng từ máy vi tính và những thiết bị không dây"
+"terminally ill",2,"bệnh chết người"
+"splitting headache",2,"đau như búa bổ"
+"trivial ailments",2,"ốm vặt"
+"severe illness",2,"ốm nặng"
+"incurable disease",2,"bệnh ko chữa khỏi được"
+"acutely painful",2,"rất đau đớn"
+"alleviate pain",2,"giảm đau"
+"a therapy for",2,"bp trị liệu cho"
+"engender",2,"sinh ra một cảm giác gì đó"
+"inferiority complex",2,"phức cảm tự ti"
+"fail to materialize",2,"thất bại"
+"thought-provoking",2,"kích thích tư duy"

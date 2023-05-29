@@ -1,0 +1,52 @@
+/* style cho label */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* style cho input */
+.form-group input[type=text],
+.form-group input[type=tel],
+.form-group input[type=date],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* style cho form group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* style cho avatar */
+.form-group .profile-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* style cho file input */
+
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.custom-file-upload:hover {
+  background-color: #007bff;
+  color: #fff;
+}

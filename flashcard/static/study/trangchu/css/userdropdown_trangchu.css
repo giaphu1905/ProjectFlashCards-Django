@@ -1,0 +1,114 @@
+.dropdown .button {
+  border: 0;
+}
+.dropdown>a {
+  color: #000;
+}
+
+.dropdown>a .arrow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: .3s transform ease;
+  -o-transition: .3s transform ease;
+  transition: .3s transform ease;
+}
+
+.dropdown.show>a .arrow {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.dropdown .btn:active,
+.dropdown .btn:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none;
+}
+
+.dropdown .title-wrap {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dropdown .title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dropdown .profile-pic {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px;
+}
+
+.dropdown .profile-pic img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.dropdown .profile-info h3,
+.dropdown .profile-info span {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown .profile-info h3 {
+  font-size: 16px;
+}
+
+.dropdown .profile-info span {
+  display: block;
+  font-size: 13px;
+}
+
+.dropdown .dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0px !important;
+}
+
+.dropdown .dropdown-menu a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  padding: 15px 15px;
+  position: relative;
+  color: #b2bac1;
+}
+
+.dropdown .dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.-dropdown .dropdown-menu a .icon {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.dropdown .dropdown-menu a:hover,
+.dropdown .dropdown-menu a:active,
+.dropdown .dropdown-menu a:focus {
+  background: #fff;
+  color: #000;
+}
+
+.dropdown .dropdown-menu a:hover .number,
+.dropdown .dropdown-menu a:active .number,
+.dropdown .dropdown-menu a:focus .number {
+  color: #fff;
+}
+
+.dropdown .dropdown-menu a .number {
+  padding: 2px 6px;
+  font-size: 11px;
+  background: #fd7e14;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 15px;
+  border-radius: 4px;
+  color: #fff;
+}

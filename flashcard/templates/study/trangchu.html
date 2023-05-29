@@ -1,0 +1,43 @@
+{% extends "base_home.html" %}
+
+{% block title%}DPFs - Trang chủ{% endblock %}
+
+{% block mycss %}
+    {{ block.super }}
+{% endblock %}
+{% block content %}
+    <div class="container">
+        {% if flashcard_data_recent %}
+            <h3>Được cập nhật gần đây</h3>
+        {% endif %}
+        <div class="row">
+        {% for flashcard in flashcard_data_recent %}
+                <div class="col-4 card">
+                    <div class="card-content" style="cursor: auto;">
+                        <a class="card-link" href="{% url 'study:thenho' flashcard_id=flashcard.id %}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{flashcard.title}}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">{{flashcard.word_count}} thuật ngữ</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-footer" style="cursor: auto;">
+                        <img src="{{flashcard.user.avatar.url}}" alt="avatar" width="30" height="30"> 
+                        <a href="#" class="card-link">{{flashcard.user}}</a>
+                    </div>
+                </div>
+            
+        {% endfor %}
+    </div>
+        {% if flashcard_data_recent %}
+            {% else %}
+                <div class="col-12">
+                    <h3 class="text-center mt-5">Trang web hiện chưa có học phần nào!!!</h3>
+                </div>
+            {% endif %}
+    </div>
+        
+            
+        
+{% endblock %}
+

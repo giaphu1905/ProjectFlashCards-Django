@@ -1,0 +1,60 @@
+"What is the form I9? ","Helps employers verify whether an employee can legally work in the US"
+"What types of employees do not require an I9? ","Those employees for casual domestic work in a private home on an irregular basis, independent contractors, leased employees (agency is responsible for this), and those not physically working on US soil."
+"What is Section 1 of the I9? ","Consists of basic employee information and must be completed by employee"
+"What is Section 2 of the I9? ","Employer portion, they must examine the evidence of identity and employment authorization for the employee."
+"When must Section 2 of the I9 be completed by employers? ","Within three business days of the date employment begins."
+"What combination of of documents can an employee provide for sections A,B, and C? ","Provide any document from section A to prove both identity and authorization. Or they can provide a document from section B to prove identity AND provide a document from section C to prove employment authorization."
+"What is Section 3 of the I9? ","Only required to be complete by employers if employee information needs to be updated or are being rehired within three years of their original hire date."
+"How long must an employer retain an I9 for? ","Three years after hire date of employee or one year after termination of employee"
+"What is E-verify? ","A free system provided by USCIS with an automated link to Federal databases to help employers determine employment eligibility."
+"What is the penalty for failing to comply with I9 requirements? ","$252 to $2,507"
+"What is the first penalty for hiring an unauthorized alien? ","$590 to $4,772"
+"What is the penalty for the second offense of hiring an unauthorized alien? ","$4,772 to $11,803"
+"What is the penalty for any offenses after the second offense of hiring an unauthorized alien? ","$7,082 to $23,07"
+"What is the W-4? ","Employee's withholding certificate, dictates the federal withholding amount for employees"
+"When should an employee's new W-4 go into effect? ","No later than the start of the first payroll period ending on or after the 30th day from the date the replacement W-4 is received."
+"What is step 1 of the W-4? ","Name, address, SSN, filing status"
+"What is step 2 of the W-4? ","Identify multiple jobs or working spouse (increases tax)"
+"What is step 3 of the W-4? ","Claim dependents (decreases tax)"
+"What is step 4 of the W-4? ","Other income, deductions, additional withholding per pay"
+"What is step 5 of the W-4? ","Signature and date"
+"When can an employee claim exempt on the W-4? ","If they had no income tax liability last year and expects none this year."
+"When must an employee submit a new exempt W-4 form? ","By Feb 15th of that year"
+"What must an employer do if an employee doesn't provide a new exempt W-4 form? ","Withhold at single with no other adjustments or the last non-exempt W-4 setup."
+"How long should employers retain copies of W-4s? ","4 years"
+"What is the employer penalty for submitting a W-4 with less tax liability? ","$500"
+"What is a "lock-in letter"? ","A letter provided by the IRS that states the employee's withholding rate. The employer must disregard any W-4s the employee submits that reduce the liability for the employee."
+"What is an ITIN? ","A 9-digit number for resident and nonresident aliens who are NOT eligible for US employment and need identification for other tax purposes."
+"What is form SS-5? ","A form that can be used to make changes or corrections, as well as as well as apply for a new SSN."
+"What service allows employers to verify employee SSN? ","Social Security Number Verification Service (SSNVS)"
+"What is E-verify? ","System operated by the Department of Homeland Security with the SSA that allows employers to electronically verify the employment eligibility of their newly hired employees."
+"What should employers do if there is SSN verification mismatch? ","Check employer entries, consult with the employee, refer the employee to SSA, and Document efforts."
+"What is the penalty for a missing or incorrectly reported SSN if corrected by March 2nd? ","$50 per return, max of $571,000 annually for large employers (avg annual gross of more than $5 mil)
+
+Max of $199,500 annually"
+"What is the penalty for a missing or incorrectly reported SSN if corrected by March 3rd to August 1st? ","$110 per return, max of $1,713,000 annually for large employers (avg annual gross of more than $5 mil)
+
+Max of $571,000 for small employers (avg. annual gross less than $5 mil)"
+"What is the penalty for a missing or incorrectly reported SSN if correct by August 1st or not at all? ","$280 per return, max of $3,426,000 for large employers (avg annual gross of more than $5 mil)
+
+max of $1,142,000 for small employers (avg annual gross of less than $5 mil)"
+"What is the penalty for failure to file correct information returns due to intentional disregard? ","Is the greater of $570 or 10% of the aggregated amount of the items to be reported correctly"
+"What is the minimum information an employer should obtain when hiring an employee? ","- Legal name
+- SSN
+- ADdess
+- DOB
+- Gender
+- Form W4
+- For I9
+- Applicable State/Locol Juris"
+"What is the minimum information required when hiring an independent contractor? ","- Legal name of the independent contractor
+- The legal address of the individual or their company 
+- the TIN (SSN or EIN)"
+"What information does federal law require to be reported for new hires? ","- Employer name
+- Employer address
+- Employer FEIN
+- Employee name
+- Employee address
+- Employee SSN
+- Date of hire"
+"What is the civil penalty if an employer fails to report new hires? ","$25 per new hire, up to $500 if it was a conspiracy"

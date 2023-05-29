@@ -1,0 +1,105 @@
+{% extends "base_home.html" %}
+{% load static %}
+{% block title%}DPFs - FlashCard của tôi{% endblock %}
+
+{% block mycss%}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'study/my_flashcard/css/my_flashcard.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="d-flex justify-content-between p-2" style="border-bottom: 0.125rem solid #b1b2b7;">
+            <h3>Các học phần</h3>
+            <div class="d-flex align-items-center">
+                <button type="button" id="btn-create-flsc" class="btn btn-primary rounded-circle bg-black" 
+                        data-toggle="modal" data-target="#staticBackdrop">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <span class="ml-3 align-self-center">Tạo FlashCard</span>
+            </div>
+        </div>
+        <div id="my-flashcards" class="row p-1">
+            {% for flashcard in my_flashcards %}
+                <div class="col-4 card">
+                    <div class="card-content" style="cursor: auto;">
+                        <a class="card-link" href="{% url 'study:thenho' flashcard_id=flashcard.id %}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{flashcard.title}}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">{{flashcard.word_count}} thuật ngữ</h6>
+                            </div>
+                        </a>
+                        <button onclick="openModal({{flashcard.id}})" class="btn-del-card"><i class="fas fa-ban"></i></button>
+                    </div>
+                    <div class="card-footer" style="cursor: auto;">
+                        <img src="{{flashcard.user.avatar.url}}" alt="avatar" width="30" height="30"> 
+                        <a href="#" class="card-link">{{flashcard.user}}</a>
+                    </div>
+                </div>
+            {% endfor %}
+            {% if my_flashcards %}
+            {% else %}
+                <div class="col-12">
+                    <p class="text-center">Bạn chưa có học phần nào</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-body bg-image overlay " style="background-image: url({% static 'images/kesach.jpg' %});">
+                    <div class="line px-3 to-front">
+                        <div class="row align-items-center">
+                            <div class="col logo">
+                                <img src={% static 'images/logo.svg' %} alt="Image" class="img-fluid"></img>
+                            </div>
+                            <div class="col-md-8 text-center">
+                                <h1>Tạo bộ FlashCard mới</h1>
+                            </div>
+                            <div class="col text-right"></div>
+                        </div>
+                    </div>
+                    <div class="p-4 to-front">
+                        <div class="text-center">
+                        <h3>Tiêu đề FlashCard</h3>
+                        <p class="mb-4"></p>
+                        <form method="post" class="d-flex mb-4">
+                            {% csrf_token %}
+                            {{ flashcard_form.title }}
+                            {{ flashcard_form.user }}
+                            <input type="submit" class="btn btn-primary" value="Tạo">
+                        </form>
+                        <p class="mb-0 cancel"><a href="" data-dismiss="modal">Hủy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="del-card-modal" class="modal">
+        <form id="delete-card-form" method="POST" class="modal-dialog" role="document">
+            {% csrf_token %}
+            <div class="modal-content rounded-0">
+                <div class="modal-body overlay">
+                    <div class="p-3 to-front">
+                        <div class="text-center">
+                            <h3>Bạn có chắc rằng bạn muốn xóa bộ FlashCard này của bạn?</h3>
+                        </div>
+                        <div class="d-flex mt-4 justify-content-around">
+                            <button type="button" class="btn btn-secondary mr-2" onclick="closeModal()">Hủy</button>
+                            <button type="submit" class="btn btn-danger">Xóa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+{% endblock %}
+
+{% block myjs %}
+    {{ block.super }}
+    <script src="{% static 'study/my_flashcard/js/my_flashcard.js' %}"></script>
+{% endblock %}
+

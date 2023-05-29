@@ -1,0 +1,171 @@
+{% extends 'base_home.html' %}
+{% load static %}
+{% block title %}
+  DPFs - {{ flashcard.title }}
+{% endblock %}
+
+{% block mycss %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'study/chucnangcoban/create_cards/css/create_cards.css' %}?v=2">
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <h1 style="padding-top: 40px;">Thêm các thẻ cho bộ FlashCard</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div id="titleDiv" class="titleDisplay">
+            <div class="TermContent-side">
+                {{ flashcard_form_edit.title }}
+                <div class="underlineInput bg-warning"></div>
+            </div>
+        </div>
+        {% csrf_token %}
+        <div id="card-data-container" class="d-flex flex-column gap-3 pt-4">
+            {% for i in word_range %}
+            {% for card_edit in card_forms_edit %}
+            {% if forloop.parentloop.counter0 == forloop.counter0 %}
+                <div class="TermContent-inner">
+                    <input type="hidden" name="card_id" value="{{ card_edit.instance.id }}"/>
+                    <div class="StudiableItemToolbar d-flex justify-content-between">
+                        <div id="counter-card" class="d-flex">
+                            <h5 id="counter-value" style="padding-left: 10px; color: #868789;">{{ i|add:1 }}</h5>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <button type="button" class="btn-del-card"><i class="far fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="TermContent-inner-padding">
+                        <div class="TermContent-sides">
+                            <div class="TermContent-sideWrap">
+                                <div class="TermContent-side TermContent-side--word">
+                                    <div class="WordSide">
+                                        {{card_edit.word}}
+                                        <div class="underlineInput"></div>
+                                    </div>
+                                </div>
+                                <div class="TermContent-side TermContent-side--definition">
+                                    <div class="DefinitionSide">
+                                        {{card_edit.meaning}}
+                                        <div class="underlineInput"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="d-flex align-items-center justify-content-center" style="height: 80px;">
+            <button type="button" id="add-card-button" class="d-flex align-items-center justify-content-center gap-1 buttonAddCards"><i class="fas fa-plus"></i>Thêm thẻ</button>
+        </div>
+        
+        <input class="save-flscard-submit" type="submit" value="Lưu FlashCard"/>
+    </form>
+  </div>
+{% endblock %}
+
+{% block myjs %}
+  {{ block.super }}
+  <script>
+    const cardDataContainer = document.getElementById('card-data-container');
+    const addCardButton = document.getElementById('add-card-button');
+    
+    addCardButton.addEventListener('click', function () {
+        var h5Elements = document.querySelectorAll("#counter-value")
+        if (h5Elements.length == 0 ) {
+            var currentCounter = 1;
+        } else {
+            var currentCounter = parseInt(h5Elements[h5Elements.length - 1].innerText) + 1;
+        }
+        const cardData = document.createElement('div');
+        cardData.classList.add('TermContent-inner');
+        cardData.innerHTML = `
+            <input type="hidden" name="card_id" value="{{ card_edit.instance.id }}"/>
+            <div class="StudiableItemToolbar d-flex justify-content-between">
+                <div id="counter-card" class="d-flex">
+                    <h5 id="counter-value" style="padding-left: 10px; color: #868789;">${currentCounter}</h5>
+                </div>
+                <div class="d-flex gap-3">
+                    <button type="button" class="btn-del-card"><i class="far fa-trash-alt"></i></button>
+                </div>
+            </div>
+            <div class="TermContent-inner-padding">
+                <div class="TermContent-sides">
+                    <div class="TermContent-sideWrap">
+                        <div class="TermContent-side TermContent-side--word">
+                            <div class="WordSide">
+                                <input type="text" name="word" placeholder="Từ vựng" required />
+                                <div class="underlineInput"></div>
+                            </div>
+                        </div>
+                        <div class="TermContent-side TermContent-side--definition">
+                            <div class="DefinitionSide">
+                                <input type="text" name="meaning" placeholder="Định nghĩa" required />
+                                <div class="underlineInput"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        cardDataContainer.appendChild(cardData);    
+    });
+    window.addEventListener('click', function() {
+        // Lấy danh sách tất cả các thẻ card đã được thêm vào
+        var allCardData = document.querySelectorAll('.TermContent-inner');
+            
+        // Duyệt qua từng thẻ card và thêm sự kiện focus và blur cho các ô input
+        allCardData.forEach(function(cardData) {
+            var wordInput = cardData.querySelector('.TermContent-side--word input');
+            var definitionInput = cardData.querySelector('.TermContent-side--definition input');
+            var wordUnderline = cardData.querySelector('.TermContent-side--word .underlineInput');
+            var definitionUnderline = cardData.querySelector('.TermContent-side--definition .underlineInput');
+    
+            wordInput.addEventListener('focus', function() {
+                wordUnderline.style.backgroundColor = '#09aa59';
+            });
+    
+            wordInput.addEventListener('blur', function() {
+                wordUnderline.style.backgroundColor = '';
+            });
+    
+            definitionInput.addEventListener('focus', function() {
+                definitionUnderline.style.backgroundColor = '#09aa59';
+            });
+    
+            definitionInput.addEventListener('blur', function() {
+                definitionUnderline.style.backgroundColor = '';
+            });
+        });
+    });
+    cardDataContainer.addEventListener('click', function(event) {
+        const target = event.target;
+        
+        if (target.classList.contains('fa-trash-alt')) {
+            // Lấy phần tử cha chứa card để xóa
+            const cardContainer = target.closest('.TermContent-inner');
+            // Lấy input field lưu ID của card
+            const cardIdInput = cardContainer.querySelector('input[name="card_id"]');
+            // Lấy ID của card
+            const cardId = cardIdInput.value;
+            // Xóa card container khỏi DOM
+            cardContainer.remove();
+            // Tạo input field ẩn để gửi ID của card trong request POST
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'card_id_delete';
+            hiddenInput.value = cardId;
+        
+            // Thêm input field ẩn vào form
+            cardDataContainer.appendChild(hiddenInput);
+
+            var counters = document.querySelectorAll("#counter-value");
+            for (let i = 0; i < counters.length; i++) {
+                counters[i].textContent = i + 1;
+            }
+        }
+    });
+      
+  </script>
+{% endblock %}

@@ -1,0 +1,28 @@
+"adolescence","thời thanh niên"
+"Adulthood","tuổi trưởng thành"
+"Brisk","Nhanh nhẹn"
+"Chronic","(adj) mãn tính
+In ...... cases diet, exercise and natural methods were chiefly relied upon"
+"Counteract","(v) chống lại
+Ex: We need to ................ the effects of global warming"
+"desire","n., v. /di'zaiə/ ước muốn; thèm muốn, ao ước"
+"Curb","to control or limit something that is not wanted:
+The government should act to curb tax evasion."
+"diminish","( ~ decrease ) Giảm bớt, hạ bớt
+Your pain should diminish gradually after taking these tablets.
+His influence has diminished with time."
+"disorder","rối loạn"
+"disrupt","interrupt"
+"infectious","lây nhiễm"
+"insomnia","(n) sleeplessness, sự mất ngủ"
+"intake","(n) lấy vào, tiêu thụ, nạp vào"
+"moderate","vừa phải (adj)"
+"muscular","cơ bắp vạm vỡ"
+"nourishing","Nutritious"
+"onset","sự bắt đầu (n)"
+"persistent","dai dẳng, kiên trì bền bỉ"
+"regular","Đều đặn (adj)"
+"stimulate","kích thích (v)"
+"therapy","Treatment - sự điều trị"
+"trigger","provoke kích hoạt, khơi nguồn (v)"
+"vital","quan trọng"

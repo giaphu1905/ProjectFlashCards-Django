@@ -1,0 +1,64 @@
+{% extends 'base_home.html' %}
+{% load static %}
+{% block title %}
+  DPFs - {{ flashcard.title }}
+{% endblock %}
+
+{% block mycss %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'study/chucnangcoban/create_cards/css/create_cards.css' %}">
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <h1 style="padding-top: 40px;">Thêm các thẻ cho bộ FlashCard</h1>
+    <div id="titleDiv" class="titleDisplay">
+      <h2 style="margin-bottom: 0;">{{ flashcard.title }}</h2>
+      <div class="underlineInput bg-warning"></div>
+    </div>
+    <form method="post">
+      {% csrf_token %}
+      <div id="card-data-container" class="d-flex flex-column gap-3 pt-4">
+        <div class="TermContent-inner">
+          <div class="StudiableItemToolbar d-flex justify-content-between">
+            <div id="counter-card" class="d-flex">
+              <h5 style="padding-left: 10px; color: #868789;">1</h5>
+            </div>
+            <div class="d-flex gap-3">
+              <i class="fas fa-grip-lines"></i>
+              <i class="far fa-trash-alt"></i>
+            </div>
+            
+          </div>
+          <div class="TermContent-inner-padding">
+            <div class="TermContent-sides" >
+              <div class="TermContent-sideWrap">
+                <div class="TermContent-side TermContent-side--word">
+                  <div class="WordSide">
+                    <input type="text" name="card_data['word']" placeholder="Từ vựng" required />
+                    <div class="underlineInput"></div>
+                  </div>
+                </div>
+                <div class="TermContent-side TermContent-side--definition">
+                  <div class="DefinitionSide">
+                    <input type="text" name="card_data['meaning']" placeholder="Định nghĩa" required />
+                    <div class="underlineInput"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-center" style="height: 80px;">
+        <button type="button" id="add-card-button" class="d-flex align-items-center justify-content-center gap-1 buttonAddCards"><i class="fas fa-plus"></i>Thêm thẻ</button>
+      </div>
+      
+      <input class="save-flscard-submit" type="submit" value="Lưu FlashCard"/>
+    </form>
+  </div>
+{% endblock %}
+
+{% block myjs %}
+  {{ block.super }}
+  <script src="{% static 'study/chucnangcoban/create_cards/js/create_cards.js' %}"></script>
+{% endblock %}

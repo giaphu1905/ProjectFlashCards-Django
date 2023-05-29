@@ -1,0 +1,69 @@
+{% extends "base_home.html" %}
+{% load static %}
+{% block title%}Hồ sơ người dùng{% endblock %}
+
+{% block mycss %}
+	{{ block.super }}
+	<link rel="stylesheet" href="{% static 'user/css/profile.css' %}?v=5">
+{% endblock %}
+
+{% block content %}
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<h2 class="text-center mb-4">Hồ sơ người dùng</h2>
+				<!-- Form nhập thông tin hồ sơ người dùng -->
+				<form method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="{{ form.avatar.id_for_label }}">Ảnh đại diện: </label>
+						<img src="{{ user_login.avatar.url }}" class="profile-pic" alt="avatar" id="avatar-preview"></img>
+						<input type="file" id="{{ form.avatar.id_for_label }}" name="avatar" onchange="previewAvatar(event)">
+					</div>
+					<div class="form-group">
+						<label for="{{ form.fullname.id_for_label }}">Họ và tên:</label>
+						{{ form.fullname }}
+					</div>
+					<div class="form-group">
+						<label for="{{ form.date_of_birth.id_for_label }}">Ngày sinh:</label>
+						{{ form.date_of_birth }}
+					</div>									  
+					<div class="form-group">
+						<label for="{{ form.gender.id_for_label }}">Giới tính:</label>
+						{{ form.gender }}
+					</div>
+					<div class="form-group">
+						<label for="{{ form.phone_number.id_for_label }}">Số điện thoại:</label>
+						{{ form.phone_number }}
+					</div>
+					<div class="form-group">
+						<label for="{{ form.address.id_for_label }}">Địa chỉ:</label>
+						{{ form.address }}
+					</div>
+					<div class="form-group">
+						<div class="d-flex justify-content-end">
+							<button type="submit" class="btn btn-primary ml-auto m-lg-4">Cập nhật</button>
+						</div>
+					</div>
+				</form>				
+			</div>
+		</div>
+	</div>
+	<script>
+		function previewAvatar(event) {
+			var input = event.target;
+			var reader = new FileReader();
+			reader.onload = function(){
+			  var img = document.getElementById("avatar-preview");
+			  img.src = reader.result;
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	</script>
+{% endblock %}
+
+{% block myjs %}
+	{{ block.super }}
+{% endblock %}
+
+

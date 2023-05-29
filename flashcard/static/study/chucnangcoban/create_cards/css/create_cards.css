@@ -1,0 +1,108 @@
+.TermContent-inner {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    position: relative;
+}
+.StudiableItemToolbar {
+    margin-bottom: 0;
+    margin-top: 0;
+    cursor: move;
+    padding: 0.75rem;
+    align-items: center;
+    border-bottom: 2px solid #f6f7fb;
+    display: flex;
+    transition: all 0.12s ease;
+}
+.TermContent-inner-padding {
+    padding: 0.75rem 0.75rem 1.5rem 0.75rem;
+}
+.TermContent-sideWrap {
+    display: table;
+    min-height: 3.375rem;
+    table-layout: fixed;
+    transition: none 0.3s ease-out;
+    width: 100%;
+}
+.TermContent-side--word {
+    padding-left: 0.75rem;
+    padding-right: 1.25rem;
+    width: 50%;
+}
+.TermContent-side {
+    cursor: text;
+    display: table-cell;
+    padding-top: 0.75rem;
+    position: relative;
+    vertical-align: top;
+    word-break: break-word;
+}
+.TermContent-side--definition {
+    padding-left: 1.25rem;
+    padding-right: 0.75rem;
+    width: 50%;
+}
+.DefinitionSide {
+    position: relative;
+    word-break: break-word;
+}
+.WordSide {
+    position: relative;
+}
+.underlineInput {
+    box-shadow: 0 0.125rem 0 0 #2e3856;
+    height: 0.25rem;
+    -webkit-transition: all .12s cubic-bezier(.47,0,.745,.715);
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+}
+.underlineInput.active {
+    /* Màu khi input được focus */
+    background-color: #f00;
+}
+.TermContent-side input[type=text] {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: #2e3856;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    resize: none;
+    width: 100%;
+}
+.titleDisplay {
+    width: calc(17px * var(--title-length)); /* Điều chỉnh tham số '10px' cho phù hợp với kích thước mong muốn */
+}
+.buttonAddCardBox {
+    display: flex;
+}
+.buttonAddCards {
+    background: transparent;
+    box-shadow: none;
+    color: #2e3856;
+    font-weight: 500;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #2e3856;
+}
+input.save-flscard-submit{
+    border: 1px solid #2e3856;
+    border-radius: 10px;
+    background-color: coral;
+}
+button.btn-del-card {
+    border: none;
+    border-radius: 10px;
+    background-color: none;
+}
+button.btn-del-card {
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+}
+button.btn-del-card:hover {
+    background-color: #f1f1f1;
+}

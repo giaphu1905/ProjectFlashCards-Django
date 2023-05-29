@@ -1,0 +1,271 @@
+.FlashcardShow {
+    margin: 0 auto;
+    max-width: 54.5625rem;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.FlashcardShow .FlashcardTitle {
+    align-content: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.FlashcardShow .Flashcard-studyPreview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.ModeLearningSec {
+    max-width: 52.5rem;
+    align-self: center;
+    display: grid;
+    flex-shrink: 0;
+    grid-gap: 1rem;
+    gap: 1rem;
+    margin: -0.5rem 0 1.5rem;
+    width: 100%;
+}
+.ModeLearningList {
+    display: flex;
+    gap: 0;
+    justify-content: space-between;
+}
+a.ModeLearningItem {
+    width: 160px;
+    height: auto;
+    box-shadow: 0 0.0625rem 0.1875rem 0 rgb(191, 191, 191);
+    background: whitesmoke;
+    border-bottom: 0.25rem solid #0000;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    grid-gap: 0.75rem;
+    gap: 0.75rem;
+    grid-template-columns: 2rem 1fr;
+    padding: 0.5rem 0.75rem;
+    place-items: center start;
+    position: relative;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+}
+.ModeLearningItem:hover {
+    box-shadow: 0 0.09rem 1rem 0 rgb(58, 103, 126);
+    border-bottom-color: #dbdfff;
+}
+.ModeLearningItemHeader {
+    align-items: center;
+    display: flex;
+}
+.ModeLearningItemName {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+.ModeLearningItem header {
+    display: block;
+}
+
+.flip-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d6dbde;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 0.8s;
+}
+
+.flip-card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+
+.flip-card .face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 260px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    backface-visibility: hidden;
+}
+
+.face.back {
+    transform: rotateY(180deg);
+}
+
+a {
+    color: black;
+}
+.underStudyPreview {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 0.125rem solid #b1b2b7;
+}
+.underStudyPreview button {
+    background: none;
+    border: none;
+    border-radius: 50%;
+}
+.FlashcardInfo {
+    margin: 0 auto;
+    height: 114px;
+    position: relative;
+}
+.FlashcardInfo .ContentInfo {
+    min-height: 50px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+.UserInfoFlashcard {
+    clear: both;
+    margin-left: 0;
+    margin-right: auto;
+    height: 50px;
+    padding: 0;
+    word-wrap: break-word;
+}
+.UserInfoFlashcard .profile-pic img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.UserInfoFlashcard .profile-pic,.UserInfoFlashcard .profile-info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.profile-info span {
+    display: block;
+    font-size: 14px;
+}
+
+.profile-info h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+.OptionFlashcard {
+    min-height: 2.25rem;
+    z-index: 100;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-option-circle {
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #fff;
+    color: #586380;
+    border: 0.0625rem solid #73767f;
+    letter-spacing: normal;
+    min-height: 2.5rem;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    font: inherit;
+    justify-content: center;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+}        
+.button-option-circle:hover {
+background-color: #edeff4; /* Màu nền sẽ đổi khi hover */
+cursor: pointer; /* Thay đổi kiểu con trỏ khi hover */
+}
+.ListCard {
+    margin: 0 auto;
+    max-width: 54.5625rem;
+    padding: 2.5rem;
+    position: relative;
+}
+.ListCardSec .ListCardHeader {
+    margin-bottom: 0.0625rem;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ListCardHeader .header-control{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+    flex-direction: row-reverse;
+}
+.header-control .sortDropdown {
+    display: inline-block;
+    margin-bottom: 0.625rem;
+    margin-left: 1.5rem;
+}
+.DScacthuatngu {
+    margin-top: 20px;
+    display: flex;
+    position: relative;
+    gap: 12px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.ThuatNgu {
+    background: #fff;
+    border-radius: 0.25rem;
+    min-height: 84px;
+    box-shadow: 0 0.125rem 0.25rem #00000014;
+}
+
+.ThuatNgu .ThuatNguinner {
+    padding: 1rem;
+    min-height: 84px;
+}
+.ThuatNguinner:after, .SetPageTerm-inner:before {
+    content: "";
+    display: table;
+}
+.contentWrapper {
+    display: inline-block;
+    width: calc(100% - 4.5rem);
+}
+
+.ThuatNgu-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -2.5rem;
+    margin-left: -2rem;
+    text-align: left;
+}
+
+.ThuatNgu-side .ThuatNgu-sideContent {
+    border-right: 0.125rem solid #b1b2b7;
+    flex-grow: 1;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.ThuatNgu-content .ThuatNgu-side {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    position: relative;
+    vertical-align: top;
+    width: 33%;
+}

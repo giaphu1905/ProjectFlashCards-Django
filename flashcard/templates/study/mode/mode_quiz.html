@@ -1,0 +1,108 @@
+{% extends "study/navbar_study.html" %}
+
+{% load static %}
+
+{% block title%}Quiz: | DPFs{% endblock %}
+
+{% block mycss %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'study/mode/css/mode_quiz.css' %}">
+{% endblock %}
+
+{% block navbar_title %}
+    <div class="navbar-nav navStudy col-4 mx-auto" style="flex-direction: column;">
+        <h2 style="color: aquamarine;">QUIZ</h2>
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h2 class="d-flex align-content-between justify-content-center pb-4 pt-4">Hãy chọn thuật ngữ thích hợp cho các từ sau</h2>
+        {% for ques in questions %}
+        <article class="questionLayout">
+            <div class="questionQes">
+                <div class="d-flex align-items-stretch">
+                    <div style="font-size: 25px;font-family: Lucida Grande,Arial,sans-serif!important;">
+                        {{forloop.counter}}.
+                        {{ques.word}}
+                    </div>
+                </div>
+            </div>
+            <div class="questionAnswer">
+                <h4>Chọn đáp án đúng</h4>
+                <div class="boxAnswer" id="answer-{{forloop.counter}}">
+                    {% for ans in ques.answers %}
+                        <button class="boxContent">
+                            <div class="numberAns">{{forloop.counter}}</div>
+                            <div class="contentAns">
+                                <div class="formattext">{{ans}}</div> 
+                            </div>
+                        </button>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="thong-bao-sai pt-5" style="display: none;">
+                <h5 style="color: #b00020;">Chưa đúng, hãy cố gắng những câu tiếp theo nhé!</h5>
+            </div>
+            <div class="thong-bao-dung pt-5" style="display: none;">
+                <h5 style="color: #30b748;">Rất tốt!Bạn đã trả lời đúng!!<3</h5>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    
+{% endblock %}
+
+{% block myjs %}
+    {{ block.super }}
+    <script>
+        // Lắng nghe sự kiện khi nút đáp án được nhấn
+        questions = {{questions|safe}};
+        document.querySelectorAll('.boxContent').forEach(function(button) {
+            button.addEventListener('click', function() {
+                if (!this.classList.contains('selected')) {
+                    // Lấy ID của nút đáp án được nhấn
+                    var answerId = this.parentNode.getAttribute('id');
+                    if (answerId) {
+                        // Lấy số thứ tự của câu hỏi
+                        var questionNumber = answerId.split('-')[1];
+                        // Xác định đáp án đúng và lấy vị trí đáp án được chọn
+                        var correctAnswerIndex = questions[questionNumber - 1].correct_answer_index + 1;
+                        console.log(correctAnswerIndex);
+                        var selectedAnswerIndex = parseInt(this.querySelector('.numberAns').innerText);
+                        console.log(selectedAnswerIndex);
+                        // Kiểm tra xem đáp án có đúng không
+                        var isCorrect = (selectedAnswerIndex === correctAnswerIndex);
+                        
+                    
+                        
+                        // Tô viền màu xanh cho đáp án đúng
+                        document.querySelectorAll('#answer-' + questionNumber + ' .numberAns').forEach(function(number) {
+                            if (parseInt(number.textContent) === correctAnswerIndex) {
+                            number.parentNode.style.border = '2px solid green';
+                            }
+                        });
+                        
+                        // Tô viền màu đỏ cho đáp án được chọn nếu sai
+                        if (!isCorrect) {
+                            this.style.border = '2px solid red';
+                            this.parentNode.parentNode.parentNode.querySelector('.thong-bao-sai').style.display = 'block';
+                        }
+                        else {
+                            this.parentNode.parentNode.parentNode.querySelector('.thong-bao-dung').style.display = 'block';
+                        }
+                        
+                        // Thêm lớp 'selected' và vô hiệu hóa các nút đáp án
+                        var allBoxContents = document.querySelectorAll('#answer-' + questionNumber + ' .boxContent');
+                            for (var i = 0; i < allBoxContents.length; i++) {
+                                allBoxContents[i].setAttribute('disabled', 'disabled');
+                            }
+                        this.classList.add('selected');
+                        this.setAttribute('disabled', 'disabled');
+
+                    }
+                    
+                }
+            });
+        });
+    </script>
+{% endblock %}

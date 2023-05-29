@@ -1,0 +1,159 @@
+{% extends "study/navbar_study.html" %}
+
+{% load static %}
+
+{% block title%}Kiểm tra: | DPFs{% endblock %}
+
+
+{% block mycss %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'study/mode/css/mode_quiz.css' %}">
+    <style>
+        .haingan {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .nganWord {
+            border-right: 0.125rem solid #edeff4;
+            padding-right: 1rem;
+        }
+        .nganMeaning {
+            padding-left: 1rem;
+        }
+        .boxContent.selected {
+            border: 0.125rem solid #1c5559;
+        }
+    </style>
+{% endblock %}
+
+{% block navbar_title %}
+    <div class="navbar-nav navStudy col-4 mx-auto" style="flex-direction: column;">
+        <h4 id="card-counter-id">{{flashcard.title}}</h4>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div id="kiemtra-yesno">
+            <h2 class="d-flex align-content-between justify-content-center pb-4 pt-4">Hãy chọn Đúng/Sai cho các cặp từ sau</h2>
+            {% for ques in questions_yesno %}
+            <article class="questionLayout">
+                <div class="haingan">
+                    <div class="nganWord">
+                        <div class="questionQes">
+                            <div class="d-flex align-items-stretch flex-column">
+                                <h4 style="color: #dbb6d2;">Định nghĩa</h4>
+                                <div style="font-size: 25px;font-family: Lucida Grande,Arial,sans-serif!important;">
+                                    {{ques.word}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nganMeaning">
+                        <div class="questionQes">
+                            <div class="d-flex align-items-stretch flex-column">
+                                <h4 style="color: #b8860b63;">Thuật ngữ</h4>
+                                <div style="font-size: 25px;font-family: Lucida Grande,Arial,sans-serif!important;">
+                                    {{ques.meaning}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="questionAnswer mt-5">
+                    <h4>Chọn câu trả lời</h4>
+                    <div class="boxAnswer" id="answer-{{forloop.counter}}">
+                            <button class="boxContent" id="answer-yes-{{forloop.counter}}">
+                                <div class="contentAns">
+                                    <div class="formattext">Đúng</div> 
+                                </div>
+                            </button>
+                            <button class="boxContent" id="answer-no-{{forloop.counter}}">
+                                <div class="contentAns">
+                                    <div class="formattext">Sai</div> 
+                                </div>
+                            </button>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        <div id="kiemtra-quiz">
+            <h2 class="d-flex align-content-between justify-content-center pb-4 pt-4">Hãy chọn thuật ngữ thích hợp cho các từ sau</h2>
+            {% for ques in questions_quiz %}
+            <article class="questionLayout">
+                <div class="questionQes">
+                    <div class="d-flex align-items-stretch">
+                        <div style="font-size: 25px;font-family: Lucida Grande,Arial,sans-serif!important;">
+                            {{forloop.counter}}.
+                            {{ques.word}}
+                        </div>
+                    </div>
+                </div>
+                <div class="questionAnswer">
+                    <h4>Chọn đáp án đúng</h4>
+                    <div class="boxAnswer" id="answer-quiz-{{forloop.counter}}">
+                        {% for ans in ques.answers %}
+                            <button class="boxContent">
+                                <div class="numberAns">{{forloop.counter}}</div>
+                                <div class="contentAns">
+                                    <div class="formattext">{{ans}}</div> 
+                                </div>
+                            </button>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="thong-bao-sai pt-5" style="display: none;">
+                    <h5 style="color: #b00020;">Chưa đúng, hãy cố gắng những câu tiếp theo nhé!</h5>
+                </div>
+                <div class="thong-bao-dung pt-5" style="display: none;">
+                    <h5 style="color: #30b748;">Rất tốt!Bạn đã trả lời đúng!!<3</h5>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        <div class="d-flex align-items-center pb-4 pt-4 gap-3 flex-column">
+            <h3>Bạn đã sẵn sàng gửi bài kiểm tra?</h3>
+            <button id="test-submit" type="button" class="ModeLearningItem" style="border-color: #1c5559; border-radius: 15px; background-color: aquamarine;"><h6>Gửi bài kiểm tra</h6></button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block myjs %}
+    {{ block.super }}
+    <script src="{% static 'study/mode/js/mode_test.js' %}"></script>
+    <script>
+
+
+        questions_quiz = {{questions_quiz|safe}};
+        questions_yesno = {{questions_yesno|safe}};
+       
+        const submitButton = document.getElementById("test-submit");
+        submitButton.addEventListener("click", function() {
+            var selectedYesNoButtons = document.querySelectorAll("#kiemtra-yesno .boxContent.selected");
+            var selectedQuizButtons = document.querySelectorAll("#kiemtra-quiz .boxContent.selected");
+
+            var totalCorrectYesNo = 0;
+            selectedYesNoButtons.forEach(function(button) {
+                var questionNumber = button.parentNode.getAttribute('id').split('-')[1];
+                var correctAnswer = questions_yesno[questionNumber - 1].correct_answer;
+                var selectedAnswer = button.id.split('-')[1];
+                if (correctAnswer === selectedAnswer) {
+                    totalCorrectYesNo++;
+                }
+            });
+
+            var totalCorrectQuiz = 0;
+            selectedQuizButtons.forEach(function(button) {
+                var questionNumber = button.parentNode.getAttribute('id').split('-')[2];
+                var correctAnswerIndex = questions_quiz[questionNumber - 1].correct_answer_index + 1;
+                var selectedAnswerIndex = parseInt(button.querySelector('.numberAns').innerText);
+                if (correctAnswerIndex === selectedAnswerIndex) {
+                    totalCorrectQuiz++;
+                }
+            });
+
+            alert("Tổng số câu Yes/No đúng là: " + totalCorrectYesNo+ "\nTổng số câu trắc nghiệm đúng là: " + totalCorrectQuiz);
+        });
+    </script>
+{% endblock %}
